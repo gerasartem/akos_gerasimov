@@ -7,6 +7,7 @@
 #include <unistd.h>
 #include <sys/socket.h>
 #include <sys/un.h>
+#include <string.h>
 //#include <netinet/in.h>
 
 #define SHMEM_PATH "/my_shmem"
