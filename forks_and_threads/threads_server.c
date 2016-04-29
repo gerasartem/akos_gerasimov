@@ -63,7 +63,11 @@ int main() {
 		}
 
 		pthread_t thread;
-		thread = pthread_create(&thread, NULL, (void*)thread_func, connect);
+		int res = pthread_create(&thread, NULL, (void*)thread_func, connect);
+                if (res) {
+                  perror("pthread_create");
+                  exit(1);
+                }
 		++client_id;
 	}
 
